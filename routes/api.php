@@ -9,5 +9,4 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 });
 
 Route::post('/login', [EmployeesController::class, 'login']);
-// Route::post('/logout', [EmployeesController::class, 'logout']);
 Route::post('/logout', [EmployeesController::class, 'logout'])->middleware('auth:sanctum');
